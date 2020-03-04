@@ -1,0 +1,13 @@
+.category {
+  background-color: #bb0782;
+  min-height:100vh;
+  .banner {
+    display: block;
+    width: 100%;
+    height: 275px;
+  }
+  .at-tabs__header {
+    position: sticky;
+    top: 0;
+  }
+}

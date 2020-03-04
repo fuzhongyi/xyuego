@@ -5,6 +5,7 @@ import Index from './pages/index'
 import counterStore from './store/counter'
 
 import './app.scss'
+import '../theme/variables.scss'
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -18,13 +19,12 @@ const store = {
 
 class App extends Component {
   config = {
-    pages: [
-      'pages/index/index'],
+    pages: ['pages/index/index', 'pages/search/index', 'pages/category/index'],
     window: {
       backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black',
+      navigationBarBackgroundColor: '#fc5759',
+      navigationBarTitleText: '心乐购',
+      navigationBarTextStyle: 'white',
     },
   }
 
