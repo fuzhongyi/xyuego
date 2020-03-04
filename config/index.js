@@ -1,5 +1,7 @@
+const path = require('path');
+
 const config = {
-  projectName: 'xyueme',
+  projectName: '心乐购',
   date: '2020-1-16',
   designWidth: 750,
   deviceRatio: {
@@ -23,6 +25,9 @@ const config = {
     ]
   },
   defineConstants: {
+  },
+  alias: {
+    '@': path.resolve(__dirname, '..', 'src'),
   },
   mini: {
     postcss: {
@@ -78,7 +83,8 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
-    }
+    },
+    esnextModules: ['taro-ui']
   }
 }
 
