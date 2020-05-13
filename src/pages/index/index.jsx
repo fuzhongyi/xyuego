@@ -1,8 +1,9 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text, Image } from '@tarojs/components'
-import { AtSearchBar, AtGrid } from 'taro-ui'
-import './index.scss'
+import { AtSearchBar, AtGrid, AtDivider } from 'taro-ui'
 import { GRID_HOME_LIST, BANNER_HOME_LIST } from '@/utils/constant'
+import { GoodsCardList } from '@/components'
+import './index.scss'
 
 class Index extends Component {
   state = {
@@ -51,7 +52,11 @@ class Index extends Component {
     return (
       <View className='home'>
         <View style={`background:${color}`}>
-          <AtSearchBar placeholder='输入商品名或粘贴宝贝标题搜索' onFocus={this.goSearch} />
+          <AtSearchBar
+            disabled
+            placeholder='输入商品名或粘贴宝贝标题搜索'
+            onFocus={this.goSearch}
+          />
           <View className='banner-bg'></View>
         </View>
         <View className='container'>
@@ -74,6 +79,8 @@ class Index extends Component {
             <AtGrid data={GRID_HOME_LIST} hasBorder={false} columnNum={5} />
           </View>
         </View>
+        <AtDivider>发现好货</AtDivider>
+        <GoodsCardList />
         {/* <Navigator url='/pages/category/index?type=large'>跳转</Navigator> */}
       </View>
     )

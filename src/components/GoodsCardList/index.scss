@@ -1,0 +1,87 @@
+@import "~taro-ui/dist/style/components/flex.scss";
+
+.goods-card-list {
+  margin: -10px;
+  .goods-card {
+    width: 360px;
+    background: #fff;
+    margin: 10px;
+    box-sizing: border-box;
+    .goods-info {
+      box-sizing: border-box;
+      padding: 0 20px 26px 20px;
+    }
+    .goods-img {
+      width: 100%;
+      height: 360px;
+    }
+    .goods-name {
+      height: 60px;
+      line-height: 60px;
+      font-size: 28px;
+      overflow: hidden;
+      font-weight: 400;
+      color: #333;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .goods-pre {
+      font-size: 24px;
+      color: #888;
+      padding: 10px 0 20px;
+    }
+    .goods-money {
+      position: relative;
+      top: 4px;
+      color: #ff2b22;
+      white-space: nowrap;
+      font-size: 36px;
+      line-height: 44px;
+      height: 44px;
+      .label {
+        font-size: 24px;
+      }
+    }
+    .goods-quan {
+      position: relative;
+      overflow: hidden;
+      width: 120px;
+      display: inline-block;
+      top: 4px;
+      .border {
+        position: relative;
+        background: #fff;
+        z-index: 1;
+        display: block;
+        border-radius: 6px;
+        font-size: 24px;
+        text-align: center;
+        padding: 4px 0;
+        border: 1px solid #fc4d52;
+        color: #fc4d52;
+        :after, :before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          width: 10px;
+          height: 10px;
+          margin-top: -5px;
+          background: #fff;
+          border-radius: 20px;
+          border: 1px solid #FC4D52;
+        }
+        :after {
+          left: -5px;
+        }
+        :before {
+          right: -5px;
+        }
+      }
+    }
+
+    .tr {
+      text-align: right;
+    }
+  }
+}
